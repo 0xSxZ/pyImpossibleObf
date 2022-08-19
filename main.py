@@ -5,7 +5,7 @@ def transcrireCle(cle):
 
 def deobfuscate(arg):
 	message = ""
-	cle = transcrireCle("0xSxZ")
+	cle = transcrireCle("loooood")
 	chiffre = arg
 	for i in range(len(chiffre)):
 		chiffre[i] -= int(cle[i % len(cle)])
@@ -15,7 +15,7 @@ def deobfuscate(arg):
 def obfuscate(msg):
 	if(os.path.isfile(msg)):
 		print("[.] Obfuscating : " + msg)
-		cle = transcrireCle("0xSxZ")
+		cle = transcrireCle("loooood")
 		chiffre = []
 		message = open(msg).read()
 
@@ -32,7 +32,7 @@ def obfuscate(msg):
 				crypt += chr(elt)
 			except UnicodeEncodeError:
 				crypt += "x"
-		open(msg + ".hashed.py", "x").write("import hashy\nexec(hashy.deobfuscate("+ str(chiffre) + "))")
+		open(msg + ".hashed.py", "x").write("import pyImpossibleObf\nexec(pyImpossibleObf.deobfuscate("+ str(chiffre) + "))")
 		print("[.] Successfully obfuscated : " + msg)
 		return chiffre
 	else:

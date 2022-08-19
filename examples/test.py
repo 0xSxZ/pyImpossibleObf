@@ -1,4 +1,4 @@
 import hashy
 
 
-hashy.obfuscate("t.txt")
+hashy.obfuscate("t.py")

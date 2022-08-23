@@ -1,4 +1,5 @@
-import hashy
+import pyImpossibleObf
 
 
-hashy.obfuscate("t.py")
+
+pyImpossibleObf.obfuscate("t.py")
